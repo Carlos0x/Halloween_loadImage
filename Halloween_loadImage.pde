@@ -1,24 +1,19 @@
-//Click and Drag your cursor to "carve" the pumpkins
+PImage chicken;
+PImage lazar;
+PImage tron;
 
-PImage img;
+void setup(){
+ size(1300,1300); 
+chicken=loadImage("chicken.png");
+lazar=loadImage("lazar.png");
+tron=loadImage("tron.png");
 
-void setup() {
-  size(800, 500);
-  img = loadImage("pumpkins.png");
-  image(img, 0, 0);
+image(tron,0,0,1300,1300);
+
 }
 
-void draw() 
-{
-  save("YOURNAME.Halloween.png");
-}
+void draw(){
+  image(chicken,0,0);
+  image(lazar,300,300);
 
-void mouseDragged()
-{
-  //"Carves" the pumpkins
-  //blendMode optional, might be problematic with a light or white background
-  blendMode(OVERLAY); 
-  noStroke();
-  fill(255, 200, 25);
-  ellipse(mouseX, mouseY, 5, 5);
 }
